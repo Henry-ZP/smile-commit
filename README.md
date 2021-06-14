@@ -1,2 +1,2 @@
 # smile-commit
-smile-commit Web App
+smile-commit Web App 
