@@ -9,6 +9,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
+    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
@@ -43,11 +44,11 @@
     <section class="navbar navbar-fixed-top custom-navbar" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <!-- <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
-                </button> -->
+                </button>
                 <a href="#" class="navbar-brand"><img src="./images/logo.png" alt="Smile Commit" class="logo"></a>
                 
             </div>
@@ -407,18 +408,19 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <form action="#" method="get" class="wow fadeInUp" data-wow-delay="0.6s">
+                    <form id="contact-form" method="post" class="wow fadeInUp" data-wow-delay="0.6s">
                         <div class="col-md-6 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Name" name="name">
+                            <input type="text" id="name-input" class="form-control" placeholder="Name" name="name">
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <input type="email" class="form-control" placeholder="Email" name="email">
+                            <input type="email" id="email-input" class="form-control" placeholder="Email" name="email">
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <textarea class="form-control" placeholder="Message" rows="7" name="message"></textarea>
+                            <textarea id="description-input" class="form-control" placeholder="Message" rows="7" name="message"></textarea>
                         </div>
                         <div class="col-md-offset-4 col-md-8 col-sm-offset-4 col-sm-8">
                             <input type="submit" class="form-control" value="SEND MESSAGE">
+                            <button type="button " onClick="submitToAPI(event) " class="form-control">SEND MESSAGE</button>
                         </div>
                     </form>
                 </div>
